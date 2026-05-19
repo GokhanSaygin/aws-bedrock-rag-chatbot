@@ -18,6 +18,8 @@ Amazon Bedrock retrieves relevant information from the connected S3 document sou
 
 ## Architecture
 
+![AWS Bedrock RAG Chatbot Architecture](docs/architecture.png)
+
 ```text
 User Browser
     ↓

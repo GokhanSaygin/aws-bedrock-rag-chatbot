@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWS Bedrock RAG Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>AWS Bedrock RAG Chatbot</h1>
+      <p class="subtitle">
+        Ask questions about Gokhan's AWS Bedrock RAG chatbot project.
+      </p>
+
+      <label for="questionInput">Your Question</label>
+      <textarea
+        id="questionInput"
+        placeholder="Example: What is Gokhan currently building?"
+        rows="4"
+      ></textarea>
+
+      <button id="askButton">Ask Chatbot</button>
+
+      <div id="loading" class="loading hidden">Thinking...</div>
+
+      <div class="answer-box">
+        <h2>Answer</h2>
+        <p id="answerText">The answer will appear here.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

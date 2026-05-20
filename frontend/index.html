@@ -3,34 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AWS Bedrock RAG Chatbot</title>
+  <title>Ahmet Saygin | AI Cloud Portfolio Assistant</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <h1>AWS Bedrock RAG Chatbot</h1>
-      <p class="subtitle">
-        Ask questions about Ahmet's AWS Bedrock RAG chatbot project.
+  <main class="page">
+    <section class="hero-card">
+      <div class="badge">AWS Bedrock • RAG • Serverless • Terraform • CI/CD</div>
+
+      <h1>Ahmet Saygin</h1>
+      <h2>AI Cloud Portfolio Assistant</h2>
+
+      <p class="intro">
+        Ask questions about Ahmet’s AWS cloud engineering background, Linux administration experience,
+        migration projects, Terraform skills, CI/CD experience, and portfolio projects.
       </p>
 
-      <label for="questionInput">Your Question</label>
-      <textarea
-        id="questionInput"
-        placeholder="Example: What is Gokhan currently building?"
-        rows="4"
-      ></textarea>
+      <div class="architecture">
+        <span>S3 Frontend</span>
+        <span>→</span>
+        <span>API Gateway</span>
+        <span>→</span>
+        <span>Lambda</span>
+        <span>→</span>
+        <span>Bedrock RAG</span>
+      </div>
 
-      <button id="askButton">Ask Chatbot</button>
+      <div class="question-section">
+        <label for="questionInput">Ask a question</label>
 
-      <div id="loading" class="loading hidden">Thinking...</div>
+        <textarea
+          id="questionInput"
+          placeholder="Example: What AWS experience does Ahmet have?"
+          rows="4"
+        ></textarea>
+
+        <div class="quick-questions">
+          <button class="quick-question" type="button">Who is Ahmet?</button>
+          <button class="quick-question" type="button">What AWS experience does Ahmet have?</button>
+          <button class="quick-question" type="button">Tell me about Ahmet's Lowe's migration project.</button>
+          <button class="quick-question" type="button">Does Ahmet have Terraform experience?</button>
+          <button class="quick-question" type="button">What DevOps tools has Ahmet used?</button>
+        </div>
+
+        <button id="askButton" class="primary-button">Ask Assistant</button>
+
+        <div id="loading" class="loading hidden">
+          Thinking...
+        </div>
+      </div>
 
       <div class="answer-box">
-        <h2>Answer</h2>
+        <div class="answer-header">
+          <h3>Answer</h3>
+          <span>Powered by Amazon Bedrock</span>
+        </div>
         <p id="answerText">The answer will appear here.</p>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>

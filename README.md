@@ -263,6 +263,20 @@ Example response:
 
 ---
 
+## Terraform Infrastructure
+
+After building the project manually in the AWS Console, I converted the main infrastructure components into Terraform.
+
+Terraform files are located in:
+
+```text
+terraform/
+├── provider.tf
+├── variables.tf
+├── main.tf
+├── outputs.tf
+└── .terraform.lock.hcl
+
 ## Project Structure
 
 ```text

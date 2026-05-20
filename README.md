@@ -204,6 +204,15 @@ retrieve_and_generate()
 
 ---
 
+## CI/CD with GitHub Actions
+
+This project includes a GitHub Actions workflow to automatically deploy the Lambda function when changes are pushed to the `main` branch.
+
+Workflow file:
+
+```text
+.github/workflows/deploy-lambda.yml
+
 ## CORS Troubleshooting
 
 During development, the API worked successfully with `curl`, but the browser frontend returned the following error:

@@ -3,65 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ahmet Saygin | AI Cloud Portfolio Assistant</title>
+  <title>Ahmet Saygin | Cloud Infrastructure Engineer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="page">
-    <section class="hero-card">
-      <div class="badge">AWS Bedrock • RAG • Serverless • Terraform • CI/CD</div>
+  <header class="navbar">
+    <div class="nav-logo">Ahmet Saygin</div>
+    <nav class="nav-links">
+      <a href="#skills">Skills</a>
+      <a href="#project">Project</a>
+      <a href="#assistant">AI Assistant</a>
+      <a href="https://github.com/GokhanSaygin/aws-bedrock-rag-chatbot" target="_blank">GitHub</a>
+    </nav>
+  </header>
 
-      <h1>Ahmet Saygin</h1>
-      <h2>AI Cloud Portfolio Assistant</h2>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="status-badge">AWS • Terraform • Serverless • AI Cloud Solutions</div>
 
-      <p class="intro">
-        Ask questions about Ahmet’s AWS cloud engineering background, Linux administration experience,
-        migration projects, Terraform skills, CI/CD experience, and portfolio projects.
-      </p>
+        <h1>Cloud Infrastructure Engineer</h1>
 
-      <div class="architecture">
-        <span>S3 Frontend</span>
-        <span>→</span>
-        <span>API Gateway</span>
-        <span>→</span>
-        <span>Lambda</span>
-        <span>→</span>
-        <span>Bedrock RAG</span>
-      </div>
+        <p class="hero-subtitle">
+          I build secure, scalable AWS infrastructure, automate cloud deployments,
+          and develop AI-powered cloud applications using serverless technologies.
+        </p>
 
-      <div class="question-section">
-        <label for="questionInput">Ask a question</label>
-
-        <textarea
-          id="questionInput"
-          placeholder="Example: What AWS experience does Ahmet have?"
-          rows="4"
-        ></textarea>
-
-        <div class="quick-questions">
-          <button class="quick-question" type="button">Who is Ahmet?</button>
-          <button class="quick-question" type="button">What AWS experience does Ahmet have?</button>
-          <button class="quick-question" type="button">Tell me about Ahmet's Lowe's migration project.</button>
-          <button class="quick-question" type="button">Does Ahmet have Terraform experience?</button>
-          <button class="quick-question" type="button">What DevOps tools has Ahmet used?</button>
-        </div>
-
-        <button id="askButton" class="primary-button">Ask Assistant</button>
-
-        <div id="loading" class="loading hidden">
-          Thinking...
+        <div class="hero-buttons">
+          <a href="#assistant" class="primary-link">Ask AI Assistant</a>
+          <a href="https://github.com/GokhanSaygin/aws-bedrock-rag-chatbot" target="_blank" class="secondary-link">
+            View GitHub Project
+          </a>
         </div>
       </div>
 
-      <div class="answer-box">
-        <div class="answer-header">
-          <h3>Answer</h3>
-          <span>Powered by Amazon Bedrock</span>
+      <div class="hero-card">
+        <h2>AI Portfolio Assistant</h2>
+        <p>
+          This site includes a live Amazon Bedrock RAG chatbot that answers questions
+          about my AWS experience, Terraform skills, CI/CD work, migration projects,
+          and cloud engineering background.
+        </p>
+
+        <div class="architecture-flow">
+          <span>S3</span>
+          <span>API Gateway</span>
+          <span>Lambda</span>
+          <span>Bedrock RAG</span>
         </div>
-        <p id="answerText">The answer will appear here.</p>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Core Focus</p>
+        <h2>Cloud Infrastructure, Automation, and AI Cloud Projects</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>AWS Cloud</h3>
+          <p>EC2, VPC, S3, Lambda, RDS, API Gateway, CloudWatch, IAM, Route 53, and serverless architecture.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Infrastructure as Code</h3>
+          <p>Terraform-based infrastructure provisioning, reusable cloud components, and version-controlled environments.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>CI/CD & Automation</h3>
+          <p>GitHub Actions, Jenkins concepts, Git workflows, deployment automation, and cloud delivery pipelines.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>AI Cloud Solutions</h3>
+          <p>Amazon Bedrock Knowledge Bases, RAG workflows, Lambda backend integration, and AI-powered portfolio applications.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="project" class="section project-section">
+      <div class="project-content">
+        <p class="eyebrow">Featured Project</p>
+        <h2>AWS Bedrock RAG Chatbot</h2>
+
+        <p>
+          I built a serverless AI portfolio assistant using Amazon Bedrock Knowledge Bases,
+          AWS Lambda, API Gateway, Amazon S3, Terraform, and GitHub Actions.
+        </p>
+
+        <ul class="project-list">
+          <li>Built manually first in the AWS Console to understand each service.</li>
+          <li>Moved application code to GitHub for version control.</li>
+          <li>Added CI/CD workflows for Lambda and frontend deployment.</li>
+          <li>Converted main infrastructure components into Terraform.</li>
+          <li>Created a live AI assistant for recruiters and interviewers.</li>
+        </ul>
+      </div>
+
+      <div class="tech-stack-card">
+        <h3>Architecture</h3>
+        <div class="stack-item">Amazon S3 Static Website</div>
+        <div class="stack-item">Amazon API Gateway HTTP API</div>
+        <div class="stack-item">AWS Lambda Backend</div>
+        <div class="stack-item">Amazon Bedrock Knowledge Base</div>
+        <div class="stack-item">Terraform Infrastructure</div>
+        <div class="stack-item">GitHub Actions CI/CD</div>
+      </div>
+    </section>
+
+    <section id="assistant" class="section assistant-section">
+      <div class="assistant-container">
+        <div class="assistant-info">
+          <p class="eyebrow">Interactive Demo</p>
+          <h2>Ask My AI Portfolio Assistant</h2>
+          <p>
+            Recruiters and interviewers can ask questions about my AWS infrastructure experience,
+            Terraform knowledge, cloud migration projects, CI/CD background, and AI cloud project work.
+          </p>
+        </div>
+
+        <div class="chat-card">
+          <label for="questionInput">Ask a question</label>
+
+          <textarea
+            id="questionInput"
+            rows="4"
+            placeholder="Example: What AWS experience does Ahmet have?"
+          ></textarea>
+
+          <div class="quick-questions">
+            <button type="button" class="quick-question">Who is Ahmet?</button>
+            <button type="button" class="quick-question">What AWS experience does Ahmet have?</button>
+            <button type="button" class="quick-question">Tell me about Ahmet's Lowe's migration project.</button>
+            <button type="button" class="quick-question">Does Ahmet have Terraform experience?</button>
+            <button type="button" class="quick-question">What is Ahmet's AWS Bedrock RAG project?</button>
+          </div>
+
+          <button id="askButton" class="ask-button">Ask Assistant</button>
+
+          <div id="loading" class="loading hidden">Thinking...</div>
+
+          <div class="answer-box">
+            <div class="answer-title">Answer</div>
+            <p id="answerText">The answer will appear here.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <p>Built with AWS Bedrock, Lambda, API Gateway, S3, Terraform, and GitHub Actions.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

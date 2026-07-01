@@ -1,3 +1,12 @@
+Ahmet Saygin has built three recent hands-on cloud and DevSecOps portfolio projects:
+
+1. ECS Fargate Order Microservice
+2. EKS Kubernetes Status API
+3. DevSecOps CI/CD Security Pipeline
+
+These projects demonstrate Ahmet's hands-on experience with AWS ECS Fargate, Amazon EKS, Kubernetes, Docker, Amazon ECR, Terraform, GitHub Actions, Trivy, Checkov, CI/CD, and DevSecOps security gates.
+
+If asked what cloud projects Ahmet has built, mention all three projects: ECS Fargate Order Microservice, EKS Kubernetes Status API, and DevSecOps CI/CD Security Pipeline.
 Ahmet Saygin - Cloud, DevOps, and DevSecOps Portfolio Projects
 
 This document summarizes Ahmet Saygin's recent hands-on cloud engineering portfolio projects. These projects demonstrate Ahmet's practical experience with AWS, Docker, Terraform, Kubernetes, GitHub Actions, CI/CD, and DevSecOps security scanning.

@@ -1,15 +1,17 @@
-Ahmet Saygin has built three recent hands-on cloud and DevSecOps portfolio projects:
+Ahmet Saygin has built four recent hands-on cloud, DevOps, AI, and DevSecOps portfolio projects:
 
 1. ECS Fargate Order Microservice
 2. EKS Kubernetes Status API
 3. DevSecOps CI/CD Security Pipeline
+4. AWS Bedrock RAG AI Portfolio Assistant
 
-These projects demonstrate Ahmet's hands-on experience with AWS ECS Fargate, Amazon EKS, Kubernetes, Docker, Amazon ECR, Terraform, GitHub Actions, Trivy, Checkov, CI/CD, and DevSecOps security gates.
+These projects demonstrate Ahmet's hands-on experience with AWS ECS Fargate, Amazon EKS, Kubernetes, Docker, Amazon ECR, Terraform, GitHub Actions, Trivy, Checkov, CI/CD, DevSecOps security gates, Amazon Bedrock, Retrieval-Augmented Generation, Lambda, API Gateway, S3, and cloud-based AI assistant architecture.
 
-If asked what cloud projects Ahmet has built, mention all three projects: ECS Fargate Order Microservice, EKS Kubernetes Status API, and DevSecOps CI/CD Security Pipeline.
-Ahmet Saygin - Cloud, DevOps, and DevSecOps Portfolio Projects
+If asked what cloud projects Ahmet has built, mention all four projects: ECS Fargate Order Microservice, EKS Kubernetes Status API, DevSecOps CI/CD Security Pipeline, and AWS Bedrock RAG AI Portfolio Assistant.
 
-This document summarizes Ahmet Saygin's recent hands-on cloud engineering portfolio projects. These projects demonstrate Ahmet's practical experience with AWS, Docker, Terraform, Kubernetes, GitHub Actions, CI/CD, and DevSecOps security scanning.
+Ahmet Saygin - Cloud, DevOps, AI, and DevSecOps Portfolio Projects
+
+This document summarizes Ahmet Saygin's recent hands-on cloud engineering portfolio projects. These projects demonstrate Ahmet's practical experience with AWS, Docker, Terraform, Kubernetes, GitHub Actions, CI/CD, DevSecOps security scanning, and AI-powered cloud applications using Amazon Bedrock.
 
 Project 1: ECS Fargate Order Microservice
 
@@ -84,6 +86,24 @@ Ahmet fixed the important Terraform security findings by adding S3 versioning, K
 
 After these improvements, the GitHub Actions pipeline passed successfully.
 
+Project 4: AWS Bedrock RAG AI Portfolio Assistant
+
+Ahmet built an AWS Bedrock RAG AI Portfolio Assistant to demonstrate how a cloud-based AI assistant can answer recruiter questions using documents stored in a knowledge base.
+
+The project uses Retrieval-Augmented Generation. Instead of relying only on the model's general knowledge, the assistant retrieves relevant information from Ahmet's portfolio documents and uses that context to generate more accurate answers.
+
+The frontend is hosted as a static website on Amazon S3. The user asks a question through the portfolio website. The request goes to Amazon API Gateway, which invokes an AWS Lambda backend. The Lambda function calls Amazon Bedrock Knowledge Base using the Bedrock Agent Runtime API. The Knowledge Base retrieves relevant chunks from documents stored in Amazon S3 and uses an Amazon Bedrock foundation model to generate an answer.
+
+The assistant can answer questions about Ahmet's cloud experience, AWS services, portfolio projects, CI/CD experience, Kubernetes experience, DevSecOps experience, and tools such as Trivy, Checkov, Docker, Terraform, GitHub Actions, ECS, EKS, and Bedrock.
+
+Key technologies used in this project:
+Amazon Bedrock, Bedrock Knowledge Base, Retrieval-Augmented Generation, Amazon S3, AWS Lambda, Amazon API Gateway, CloudWatch Logs, Python, JavaScript, HTML, CSS, GitHub Actions, CI/CD, AWS IAM.
+
+Troubleshooting experience:
+Ahmet configured the Lambda function to call the Bedrock Knowledge Base using the correct Knowledge Base ID and model. He also configured API Gateway CORS headers so that the frontend website could call the backend API successfully.
+
+Ahmet added and updated knowledge documents in the S3 document bucket, synced the Bedrock Knowledge Base, and tested the assistant with recruiter-style questions. This allowed the AI assistant to answer questions about his updated ECS, EKS, DevSecOps, and Bedrock projects.
+
 Summary of Ahmet's hands-on experience from these projects:
 
 Ahmet has hands-on experience with AWS container services including ECS Fargate and EKS.
@@ -108,7 +128,9 @@ Ahmet has experience reading vulnerability scan results, identifying whether the
 
 Ahmet has experience configuring realistic security gates in CI/CD pipelines.
 
-Ahmet has troubleshooting experience with Docker image architecture mismatch, ECS task failures, EKS access entries, Kubernetes authorization, Terraform destroy dependencies, Trivy vulnerability findings, and Checkov Terraform security findings.
+Ahmet has experience building an AI-powered portfolio assistant using Amazon Bedrock, Knowledge Bases, Retrieval-Augmented Generation, Lambda, API Gateway, and S3.
+
+Ahmet has troubleshooting experience with Docker image architecture mismatch, ECS task failures, EKS access entries, Kubernetes authorization, Terraform destroy dependencies, Trivy vulnerability findings, Checkov Terraform security findings, Bedrock Knowledge Base sync, Lambda backend integration, and API Gateway CORS configuration.
 
 Recruiter Questions and Answers
 
@@ -127,8 +149,14 @@ Answer: Yes. Ahmet built an EKS Kubernetes Status API using Amazon EKS, Kubernet
 Question: Does Ahmet have ECS experience?
 Answer: Yes. Ahmet built an ECS Fargate Order Microservice using Docker, Amazon ECR, ECS Fargate, Application Load Balancer, Terraform, CloudWatch Logs, and GitHub Actions CI/CD.
 
+Question: Does Ahmet have AI or Amazon Bedrock experience?
+Answer: Yes. Ahmet built an AWS Bedrock RAG AI Portfolio Assistant using Amazon Bedrock Knowledge Base, Retrieval-Augmented Generation, AWS Lambda, API Gateway, Amazon S3, and a static portfolio frontend. The assistant answers recruiter-style questions using Ahmet's portfolio documents as a knowledge source.
+
+Question: Has Ahmet built a RAG application?
+Answer: Yes. Ahmet built a Retrieval-Augmented Generation portfolio assistant using Amazon Bedrock Knowledge Base. The assistant retrieves relevant information from S3-hosted documents and generates answers about Ahmet's cloud projects and experience.
+
 Question: What CI/CD tools has Ahmet used?
-Answer: Ahmet has used GitHub Actions for CI/CD pipelines. His pipelines build Docker images, push images to Amazon ECR, deploy to ECS and EKS, and run DevSecOps security scans using Trivy and Checkov.
+Answer: Ahmet has used GitHub Actions for multiple CI/CD workflows. In his ECS and EKS projects, GitHub Actions builds Docker images, pushes images to Amazon ECR, and deploys to AWS container platforms. In his DevSecOps project, GitHub Actions builds a Docker image and runs security scans with Trivy and Checkov before allowing the pipeline to pass.
 
 Question: What AWS services has Ahmet used in these projects?
-Answer: Ahmet has used Amazon ECS Fargate, Amazon EKS, Amazon ECR, Amazon S3, AWS IAM, VPC, public and private subnets, security groups, Application Load Balancer, CloudWatch Logs, and AWS Load Balancer Controller integrations.
+Answer: Ahmet has used Amazon ECS Fargate, Amazon EKS, Amazon ECR, Amazon S3, AWS IAM, VPC, public and private subnets, security groups, Application Load Balancer, CloudWatch Logs, AWS Load Balancer Controller integrations, Amazon Bedrock, Bedrock Knowledge Base, AWS Lambda, and Amazon API Gateway.

@@ -1,0 +1,125 @@
+Ahmet Saygin - Cloud, DevOps, and DevSecOps Portfolio Projects
+
+This document summarizes Ahmet Saygin's recent hands-on cloud engineering portfolio projects. These projects demonstrate Ahmet's practical experience with AWS, Docker, Terraform, Kubernetes, GitHub Actions, CI/CD, and DevSecOps security scanning.
+
+Project 1: ECS Fargate Order Microservice
+
+Ahmet built an ECS Fargate Order Microservice to demonstrate how a containerized backend API can be deployed on AWS using a production-like architecture.
+
+The application is a Python Flask Order API with endpoints such as /, /health, /orders, and /orders/1. Ahmet containerized the application using Docker and pushed the Docker image to Amazon ECR.
+
+The AWS infrastructure was created using Terraform. The architecture included a custom VPC, public subnets, security groups, an Application Load Balancer, ECS cluster, ECS service, Fargate task definition, target group, and CloudWatch logs.
+
+The ECS service ran the container on AWS Fargate without managing servers. The Application Load Balancer exposed the service to the internet and routed traffic to the container.
+
+Ahmet also implemented CI/CD using GitHub Actions. When code was pushed to the main branch, GitHub Actions built a new Docker image, pushed it to Amazon ECR, and forced a new deployment on ECS.
+
+Key technologies used in this project:
+AWS ECS Fargate, Amazon ECR, Docker, Terraform, Application Load Balancer, VPC, Security Groups, CloudWatch Logs, GitHub Actions, OIDC, Python, Flask.
+
+Troubleshooting experience:
+During deployment, the ECS task failed because the Docker image was built on an Apple Silicon Mac with ARM architecture, while ECS Fargate expected a Linux AMD64 image. Ahmet reviewed the CloudWatch logs, identified the architecture mismatch, rebuilt the image using Docker Buildx with --platform linux/amd64, pushed the corrected image to ECR, and redeployed the ECS service successfully.
+
+Project 2: EKS Kubernetes Status API
+
+Ahmet built an EKS Kubernetes Status API to demonstrate how a containerized backend service can be deployed and managed on Amazon EKS using Kubernetes.
+
+The application is a Python Flask Status API with endpoints such as /, /health, and /status. Ahmet built a Docker image for the application and pushed it to Amazon ECR.
+
+The AWS infrastructure was created with Terraform. The architecture included a VPC, public and private subnets, EKS cluster, managed node group, IAM roles, and supporting networking resources.
+
+On the Kubernetes side, Ahmet created Kubernetes Deployment, Service, and Ingress manifests. The Deployment managed application pods, the Service provided internal access to the pods, and the Ingress defined external HTTP routing.
+
+Ahmet installed and configured the AWS Load Balancer Controller. The controller watched the Kubernetes Ingress resource and automatically created an AWS Application Load Balancer to expose the application to the internet.
+
+Ahmet also implemented CI/CD using GitHub Actions. The pipeline built a Docker image, pushed it to Amazon ECR, updated the EKS kubeconfig, and deployed the new image to the Kubernetes Deployment using kubectl.
+
+Key technologies used in this project:
+Amazon EKS, Kubernetes, Docker, Amazon ECR, Terraform, GitHub Actions, AWS Load Balancer Controller, Application Load Balancer, Kubernetes Deployment, Service, Ingress, kubectl, Helm, eksctl, Python, Flask.
+
+Troubleshooting experience:
+Ahmet solved a Kubernetes authorization issue where GitHub Actions could authenticate to AWS but was not authorized inside the EKS cluster. He fixed this by creating an EKS access entry and associating the GitHub Actions IAM role with the required EKS cluster access policy.
+
+Ahmet also handled a complex cleanup issue during Terraform destroy. An interrupted destroy caused leftover Kubernetes Ingress, webhook configuration, target group, and security group dependencies. Ahmet diagnosed the issue, removed stuck webhook configurations, patched finalizers, manually deleted leftover AWS Load Balancer resources, and completed the Terraform destroy successfully.
+
+Project 3: DevSecOps CI/CD Security Pipeline
+
+Ahmet built a DevSecOps CI/CD Security Pipeline to demonstrate how security checks can be integrated into a CI/CD workflow before deployment.
+
+The project includes a simple Python Flask API, a Dockerfile, Terraform sample infrastructure code, and a GitHub Actions workflow.
+
+The GitHub Actions pipeline performs the following steps:
+1. Checks out the repository.
+2. Builds a Docker image.
+3. Scans the Docker image with Trivy.
+4. Scans Terraform code with Checkov.
+5. Passes or fails the pipeline based on security findings.
+
+Trivy is used for Docker image vulnerability scanning. It checks the container image for known HIGH and CRITICAL vulnerabilities in the operating system packages, Python dependencies, and base image layers.
+
+Checkov is used for Terraform security scanning. It checks Infrastructure as Code for misconfigurations and security best practice violations.
+
+The Terraform example includes an AWS S3 bucket with security controls such as public access blocking, versioning, KMS encryption, lifecycle rules, and incomplete multipart upload cleanup.
+
+Key technologies used in this project:
+GitHub Actions, Docker, Trivy, Checkov, Terraform, AWS S3, Python, Flask, DevSecOps, CI/CD security gates.
+
+Troubleshooting experience:
+At first, Trivy found HIGH and CRITICAL vulnerabilities in the Docker image, so the pipeline failed as expected. Ahmet reviewed the Trivy logs and identified that the vulnerabilities were coming from the Docker base image and system packages, not from the Flask application code.
+
+Ahmet improved the Trivy security gate by configuring the pipeline to ignore vulnerabilities that do not currently have a fixed version available, while still scanning HIGH and CRITICAL vulnerabilities.
+
+After the Trivy step passed, Checkov found Terraform security issues in the S3 bucket configuration. The missing controls included KMS encryption, versioning, lifecycle configuration, and incomplete multipart upload cleanup.
+
+Ahmet fixed the important Terraform security findings by adding S3 versioning, KMS encryption, lifecycle expiration rules, and incomplete multipart upload cleanup. He also intentionally skipped selected enterprise-level controls that were outside the scope of the demo project, such as cross-region replication, access logging, and event notifications.
+
+After these improvements, the GitHub Actions pipeline passed successfully.
+
+Summary of Ahmet's hands-on experience from these projects:
+
+Ahmet has hands-on experience with AWS container services including ECS Fargate and EKS.
+
+Ahmet has experience building and containerizing Python Flask APIs with Docker.
+
+Ahmet has experience pushing Docker images to Amazon ECR.
+
+Ahmet has experience creating AWS infrastructure using Terraform.
+
+Ahmet has experience with CI/CD pipelines using GitHub Actions.
+
+Ahmet has experience using OIDC authentication between GitHub Actions and AWS.
+
+Ahmet has experience with Kubernetes concepts including Pods, Deployments, Services, Ingress, and kubectl.
+
+Ahmet has experience with AWS Load Balancer Controller and Application Load Balancer integration for EKS.
+
+Ahmet has experience with DevSecOps tools including Trivy and Checkov.
+
+Ahmet has experience reading vulnerability scan results, identifying whether the issue comes from application code, Docker base image, operating system packages, Python dependencies, or Terraform infrastructure code.
+
+Ahmet has experience configuring realistic security gates in CI/CD pipelines.
+
+Ahmet has troubleshooting experience with Docker image architecture mismatch, ECS task failures, EKS access entries, Kubernetes authorization, Terraform destroy dependencies, Trivy vulnerability findings, and Checkov Terraform security findings.
+
+Recruiter Questions and Answers
+
+Question: Does Ahmet have DevSecOps experience?
+Answer: Yes. Ahmet built a DevSecOps CI/CD Security Pipeline using GitHub Actions, Docker, Trivy, Checkov, and Terraform. The pipeline builds a Docker image, scans it for vulnerabilities with Trivy, scans Terraform code with Checkov, and uses security gates before allowing the pipeline to pass.
+
+Question: Has Ahmet used Trivy?
+Answer: Yes. Ahmet used Trivy in a GitHub Actions pipeline to scan Docker images for HIGH and CRITICAL vulnerabilities. He reviewed Trivy scan results, identified vulnerabilities coming from the Docker base image and system packages, and configured a realistic security gate.
+
+Question: Has Ahmet used Checkov?
+Answer: Yes. Ahmet used Checkov to scan Terraform code for security misconfigurations. Checkov identified missing S3 security controls such as encryption, versioning, lifecycle rules, and multipart upload cleanup. Ahmet fixed the important findings in Terraform.
+
+Question: Does Ahmet have Kubernetes experience?
+Answer: Yes. Ahmet built an EKS Kubernetes Status API using Amazon EKS, Kubernetes Deployment, Service, Ingress, AWS Load Balancer Controller, Docker, ECR, Terraform, and GitHub Actions.
+
+Question: Does Ahmet have ECS experience?
+Answer: Yes. Ahmet built an ECS Fargate Order Microservice using Docker, Amazon ECR, ECS Fargate, Application Load Balancer, Terraform, CloudWatch Logs, and GitHub Actions CI/CD.
+
+Question: What CI/CD tools has Ahmet used?
+Answer: Ahmet has used GitHub Actions for CI/CD pipelines. His pipelines build Docker images, push images to Amazon ECR, deploy to ECS and EKS, and run DevSecOps security scans using Trivy and Checkov.
+
+Question: What AWS services has Ahmet used in these projects?
+Answer: Ahmet has used Amazon ECS Fargate, Amazon EKS, Amazon ECR, Amazon S3, AWS IAM, VPC, public and private subnets, security groups, Application Load Balancer, CloudWatch Logs, and AWS Load Balancer Controller integrations.

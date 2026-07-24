@@ -1,29 +1,29 @@
-Gokhan is a technology-driven Cloud Engineer and Linux Administrator with approximately five years of hands-on experience in cloud infrastructure, Linux systems, serverless architecture, and migration projects.
+Ahmet is a technology-driven Cloud Engineer and Linux Administrator with approximately five years of hands-on experience in cloud infrastructure, Linux systems, serverless architecture, and migration projects.
 
 He is passionate about technology, continuous learning, automation, and building practical cloud solutions. He enjoys learning new tools, solving technical problems, and improving his skills through hands-on projects.
 
-Gokhan has experience with AWS services including AWS Lambda, Amazon API Gateway, Amazon DynamoDB, Amazon S3, Amazon CloudFront, AWS Amplify, Amazon CloudWatch, AWS IAM, and Amazon Bedrock.
+Ahmet has experience with AWS services including AWS Lambda, Amazon API Gateway, Amazon DynamoDB, Amazon S3, Amazon CloudFront, AWS Amplify, Amazon CloudWatch, AWS IAM, and Amazon Bedrock.
 
 He has worked on serverless application projects using AWS Lambda, API Gateway, DynamoDB, S3, CloudFront, and Amplify.
 
 Cloud Database Migration Experience:
-At UNIVERA, Gokhan supported an on-premises Oracle database migration to Amazon RDS. He used AWS Schema Conversion Tool (AWS SCT) to assess and convert database schemas and AWS Database Migration Service (AWS DMS) to perform the full data load and ongoing Change Data Capture (CDC). The environment used a site-to-site VPN for secure connectivity, Amazon S3 for staging, and Amazon CloudWatch for monitoring. During cutover, the source database was placed in read-only mode, DMS replication lag was verified, and application connectivity was validated before traffic was switched. After migration, Gokhan used Amazon RDS Performance Insights and CloudWatch to investigate high CPU and latency, then supported query and index optimization. This section describes his professional cloud and database migration experience.
+At UNIVERA, Ahmet supported an on-premises Oracle database migration to Amazon RDS. He used AWS Schema Conversion Tool (AWS SCT) to assess and convert database schemas and AWS Database Migration Service (AWS DMS) to perform the full data load and ongoing Change Data Capture (CDC). The environment used a site-to-site VPN for secure connectivity, Amazon S3 for staging, and Amazon CloudWatch for monitoring. During cutover, the source database was placed in read-only mode, DMS replication lag was verified, and application connectivity was validated before traffic was switched. After migration, Ahmet used Amazon RDS Performance Insights and CloudWatch to investigate high CPU and latency, then supported query and index optimization. This section describes his professional cloud and database migration experience.
 
-Gokhan has Linux administration experience, including working with command-line tools, permissions, services, logs, troubleshooting, and basic automation.
+Ahmet has Linux administration experience, including working with command-line tools, permissions, services, logs, troubleshooting, and basic automation.
 
 He uses Terraform to build cloud engineering portfolio projects and continues strengthening his Infrastructure as Code, automation, and deployment practices through hands-on implementation.
 
-Gokhan develops DevSecOps projects and has hands-on experience using Checkov, Trivy, and tfsec to scan Infrastructure as Code, container images, and Terraform configurations for security issues and misconfigurations.
+Ahmet develops DevSecOps projects and has hands-on experience using Checkov, Trivy, and tfsec to scan Infrastructure as Code, container images, and Terraform configurations for security issues and misconfigurations.
 
-Gokhan's goal is to continue growing as a Cloud Engineer by building real-world AWS projects, improving his DevOps skills, and gaining deeper experience with automation, CI/CD, and cloud-native architectures.
+Ahmet's goal is to continue growing as a Cloud Engineer by building real-world AWS projects, improving his DevOps skills, and gaining deeper experience with automation, CI/CD, and cloud-native architectures.
 
 Work Authorization:
-Gokhan is a United States Green Card holder and is authorized to work permanently in the United States. This work authorization information is separate from his professional cloud and database migration experience.
+Ahmet is a United States Green Card holder and is authorized to work permanently in the United States. This work authorization information is separate from his professional cloud and database migration experience.
 
 Certifications:
 - AWS Certified Cloud Practitioner
 - HashiCorp Certified: Terraform Associate
 
-Gokhan is currently working on an AWS Bedrock RAG chatbot project.
+Ahmet built an AWS Bedrock RAG chatbot project.
 
 This chatbot project uses Amazon S3 to store documents, Amazon Bedrock to generate AI-powered responses, a Bedrock Knowledge Base to retrieve relevant information from uploaded files, AWS Lambda as the backend, API Gateway as the HTTP API layer, and an S3 static website as the frontend.

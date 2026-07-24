@@ -6,13 +6,23 @@ Gokhan has experience with AWS services including AWS Lambda, Amazon API Gateway
 
 He has worked on serverless application projects using AWS Lambda, API Gateway, DynamoDB, S3, CloudFront, and Amplify.
 
-He has also worked on migration-related projects, including a recent project at Lowe's where he supported migration activities and gained practical experience with cloud and infrastructure modernization workflows.
+Cloud Database Migration Experience:
+At UNIVERA, Gokhan supported an on-premises Oracle database migration to Amazon RDS. He used AWS Schema Conversion Tool (AWS SCT) to assess and convert database schemas and AWS Database Migration Service (AWS DMS) to perform the full data load and ongoing Change Data Capture (CDC). The environment used a site-to-site VPN for secure connectivity, Amazon S3 for staging, and Amazon CloudWatch for monitoring. During cutover, the source database was placed in read-only mode, DMS replication lag was verified, and application connectivity was validated before traffic was switched. After migration, Gokhan used Amazon RDS Performance Insights and CloudWatch to investigate high CPU and latency, then supported query and index optimization. This section describes his professional cloud and database migration experience.
 
 Gokhan has Linux administration experience, including working with command-line tools, permissions, services, logs, troubleshooting, and basic automation.
 
-He is currently learning Terraform and building cloud engineering portfolio projects to improve his Infrastructure as Code, automation, and deployment skills.
+He uses Terraform to build cloud engineering portfolio projects and continues strengthening his Infrastructure as Code, automation, and deployment practices through hands-on implementation.
+
+Gokhan develops DevSecOps projects and has hands-on experience using Checkov, Trivy, and tfsec to scan Infrastructure as Code, container images, and Terraform configurations for security issues and misconfigurations.
 
 Gokhan's goal is to continue growing as a Cloud Engineer by building real-world AWS projects, improving his DevOps skills, and gaining deeper experience with automation, CI/CD, and cloud-native architectures.
+
+Work Authorization:
+Gokhan is a United States Green Card holder and is authorized to work permanently in the United States. This work authorization information is separate from his professional cloud and database migration experience.
+
+Certifications:
+- AWS Certified Cloud Practitioner
+- HashiCorp Certified: Terraform Associate
 
 Gokhan is currently working on an AWS Bedrock RAG chatbot project.
 
